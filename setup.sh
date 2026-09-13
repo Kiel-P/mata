@@ -50,7 +50,7 @@ EOF
 
 # 4. Konfigurasi bash.bashrc (Prompt PS1)
 cat << 'EOF' > $PREFIX/etc/bash.bashrc
-PS1='\e[1;36m\]Kiheo\[\033[01;31m\]» \[\033[01;35m\]'
+PS1='\e[1;36m\]╭─\e[1;31m\] 🐑Kiheo🐑 \e[1;32m\](\w)\e[0m\]\n\e[1;36m\]╰─ \033[01;31m\]» \[\033[01;35m\]'
 EOF
 
 # 5. Hapus motd (tulisan bawaan termux)
