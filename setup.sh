@@ -5,6 +5,7 @@ echo "Memulai proses instalasi dan konfigurasi..."
 # 1. Update dan install paket
 pkg update -y && pkg upgrade -y
 pkg install ruby cowsay toilet figlet nano -y
+pkg install git -y && pkg install python
 gem install lolcat
 
 # 2. Setup storage (Meminta izin akses penyimpanan)
@@ -41,16 +42,17 @@ alias l='ls'
 alias a='cd me-cli && python main.py'
 alias g='cd git && python main.py'
 alias k='cd kiel && python main.py'
-alias 3='edoll'
+alias 3='git pull'
+alias h='clear'
 alias p='python main.py'
 alias c='cd ~/'
-alias m='cd ~/storage/shared'
+alias m='cd /sdcard'
 alias cc='cd ..'
 EOF
 
 # 4. Konfigurasi bash.bashrc (Prompt PS1)
 cat << 'EOF' > $PREFIX/etc/bash.bashrc
-PS1='\e[1;36m\]╭─\e[1;31m\] 🐑Kiheo🐑 \e[1;32m\](\w)\e[0m\]\n\e[1;36m\]╰─ \033[01;31m\]» \[\033[01;35m\]'
+PS1='\e[1;36m\]╭─\e[1;31m\] 🐑Kiheo🐑 \e[1;32m\]\w\e[0m\]\n\e[1;36m\]╰─ \033[01;31m\]» \[\033[01;35m\]'
 EOF
 
 # 5. Hapus motd (tulisan bawaan termux)
