@@ -57,6 +57,8 @@ EOF
 
 # 5. Hapus motd (tulisan bawaan termux)
 rm -rf $PREFIX/etc/motd
-
+echo "======================================================================"
 echo "Setup selesai! Silakan restart aplikasi Termux untuk melihat hasilnya."
 echo "                     © 2026 K I H E O                                "
+
+echo "======================================================================"
